@@ -153,7 +153,6 @@ def tensor(r,i):
                 mat[z].append(b)
                 con+=1
     return mat
-#print(tensor([[(1,3)]],[[(2,5),(3,5)],[(4,6),(2,9)]]))
 
 #Multiplicacion dr matriz 
 def multimat(r,i):
@@ -167,12 +166,10 @@ def multimat(r,i):
             for z in range(long):
                 mat[y][j]=suma(mat[y][j],producto(r[y][z],i[z][j]))
     return mat
-#print(multimat([[(1,0),(2,0)]],[[(2,0),(3,0)],[(5,0),(6,0)]]))
 #accion
 def accion(r,i):
     res=multimat(r,i)
     return res
-#print(accion([[(2,0),(2,0),(2,0)]],[[(2,0),(2,0),(2,0)],[(2,0),(2,0),(2,0)],[(2,0),(2,0),(2,0)]]))
 #Unitaria
 def unitaria(r):
     mat=multimat(r,matAdjun(r))
@@ -184,7 +181,6 @@ def unitaria(r):
         return True
     else:
         return False
-#print(unitaria([[(1,0),(0,0),(0,0)],[(0,0),(1,0),(0,0)],[(0,0),(0,0),(1,0)]]))
     
     
 #Norma de matrices
@@ -206,6 +202,5 @@ def distancia(r,i):
         for j in range(len(r[x])):
             res+=eleva(resta(r[x][j], i[x][j]))
     return res**0.5
-#print(distancia([[(1,2),(2,1)]],[[(1,2),(2,1)]]))
 
 
