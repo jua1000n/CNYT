@@ -24,11 +24,15 @@ El número que vamos a usar es 3+7i, para que la librería lo lea (3,7)
 
 Las funciones que vamos a encontrar se encuentra: 
 
--suma               -producto               -resta               -división               -moduló        
+- suma               
+- producto               
+- resta               
+- división              
+- moduló        
 
--conversión entre representación polar y cartesiana  
+- conversión entre representación polar y cartesiana  
 
--retorna la fase de un número complejo 
+- retorna la fase de un número complejo 
 
 Para poder usar suma, producto, resta y división es necesario que introduzcan dos números complejos en este caso. 
 
