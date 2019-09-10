@@ -94,7 +94,7 @@ class MyTestCase(unittest.TestCase):
 if __name__ == '__main__':
     unittest.main()
 ```
-# Hecho por
+# Hecho por:
 - Juan Sebastian Cadavid P
 - Ingeniero de Sistemas
 - Escuela Colombiana de Ingeniería Julio Garavito
