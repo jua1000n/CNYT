@@ -45,30 +45,49 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(ComplejosVector.mulvec(a,b), c)
     #Adición de matrices complejos.
     def test_sumMat(self):
-        a = [[(1,2)],[(2,1)]]
-        b = [[(3,1)],[(1,3)]]
-        c = [[(4,3)], [(3,4)]]
+        a = [[(1,2)],
+             [(2,1)]]
+        b = [[(3,1)],
+             [(1,3)]]
+        c = [[(4,3)],
+             [(3,4)]]
         self.assertEqual(ComplejosVector.sumMat(a,b), c)    
     #Inversa de matrices complejos.
     def test_inverMat(self):
-        a = [[(1,2)],[(3,3)],[(1,1)]]
-        c = [[(-1, -2)], [(-3, -3)], [(-1, -1)]]
+        a = [[(1,2)],
+             [(3,3)],
+             [(1,1)]]
+        c = [[(-1, -2)], 
+             [(-3, -3)], 
+             [(-1, -1)]]
         self.assertEqual(ComplejosVector.inverMat(a), c)    
     #Multiplicación escalar de matrices complejas.
     def test_Escamat(self):
         a = 3
-        b = [[(1,2)],[(3,3)],[(1,1)]]
-        c = [[(3,6)], [(9,9)], [(3,3)]]
+        b = [[(1,2)],
+             [(3,3)],
+             [(1,1)]]
+        c = [[(3,6)],
+             [(9,9)],
+             [(3,3)]]
         self.assertEqual(ComplejosVector.Escamat(a,b), c)    
     #Matriz transpuesta
     def test_matTrans(self):
-        a=[[(2,3),(1,9),(4,6)],[(2,5),(1,2),(3,6)],[(4,7),(4,9),(7,2)]]
-        b=[[(2,3),(2,5),(4,7)],[(1,9),(1,2),(4,9)],[(4,6),(3,6),(7,2)]]
+        a=[[(2,3),(1,9),(4,6)],
+           [(2,5),(1,2),(3,6)],
+           [(4,7),(4,9),(7,2)]]
+        b=[[(2,3),(2,5),(4,7)],
+           [(1,9),(1,2),(4,9)],
+           [(4,6),(3,6),(7,2)]]
         self.assertEqual(ComplejosVector.matTrans(a), b)
     #Matriz conjugada
     def test_matConj(self):
-        a=[[(2,3),(1,9),(4,6)],[(2,5),(1,2),(3,6)],[(4,7),(4,9),(7,2)]]
-        b=[[(2,-3),(1,-9),(4,-6)],[(2,-5),(1,-2),(3,-6)],[(4,-7),(4,-9),(7,-2)]]
+        a=[[(2,3),(1,9),(4,6)],
+           [(2,5),(1,2),(3,6)],
+           [(4,7),(4,9),(7,2)]]
+        b=[[(2,-3),(1,-9),(4,-6)],
+           [(2,-5),(1,-2),(3,-6)],
+           [(4,-7),(4,-9),(7,-2)]]
         self.assertEqual(ComplejosVector.matConj(a), b)
     #Matriz adjunta
     def test_matAdjun(self):
@@ -98,7 +117,8 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(ComplejosVector.distancia(a,b), c)
     #Revisar si es unitaria
     def test_unitaria(self):
-        a=[[(1,0),(0,0)],[(0,0),(1,0)]]
+        a=[[(1,0),(0,0)],
+           [(0,0),(1,0)]]
         self.assertEqual(ComplejosVector.unitaria(a), True)    
     #Revisar si es Hermitian
     def test_Hermi(self):
@@ -110,7 +130,9 @@ class MyTestCase(unittest.TestCase):
         a=[[(2,0)],
            [(3,0)]]
         b=[[(4,0)],[(6,0)],[(3,0)]]
-        c=[[[(8, 0)]], [[(12, 0)]], [[(6, 0)]], [[(12, 0)]], [[(18, 0)]], [[(9, 0)]]]
+        c=[[[(8, 0)]], [[(12, 0)]],
+           [[(6, 0)]], [[(12, 0)]], 
+           [[(18, 0)]], [[(9, 0)]]]
         self.assertEqual(ComplejosVector.tensor(a,b), c)
     
 
